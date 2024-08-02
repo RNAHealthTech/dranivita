@@ -1,0 +1,95 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0 0%;
+    --border: 240 5.9% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --accent: 183 23% 12%;
+    --accent-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --coffee: 25 28% 91%;
+    --brownie: 22 76% 87%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --accent: 183 63% 40%;
+    --accent-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply min-h-screen bg-background text-foreground;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f0f0f0' fill-opacity='0.4'%3E%3Ccircle cx='50' cy='50' r='1'/%3E%3Ccircle cx='25' cy='25' r='1'/%3E%3Ccircle cx='75' cy='75' r='1'/%3E%3Ccircle cx='75' cy='25' r='1'/%3E%3Ccircle cx='25' cy='75' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Merriweather',serif;
+
+  }
+  
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 350 100% 98%;
+    --foreground: 340 40% 20%;
+    --border: 340 30% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --accent: 340 70% 50%;
+    --accent-foreground: 340 100% 98%;
+    --muted: 340 20% 95%;
+    --muted-foreground: 340 30% 40%;
+    --primary: 340 60% 45%;
+    --primary-foreground: 340 100% 98%;
+    --secondary: 180 30% 45%;
+    --secondary-foreground: 180 100% 98%;
+  }
+
+  .dark {
+    --background: 340 30% 10%;
+    --foreground: 340 20% 90%;
+    --border: 340 20% 20%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --accent: 340 60% 50%;
+    --accent-foreground: 340 100% 98%;
+    --muted: 340 20% 20%;
+    --muted-foreground: 340 20% 80%;
+    --primary: 340 50% 60%;
+    --primary-foreground: 340 100% 98%;
+    --secondary: 180 30% 45%;
+    --secondary-foreground: 180 100% 98%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply min-h-screen bg-background text-foreground;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffd6e0' fill-opacity='0.3'%3E%3Ccircle cx='50' cy='50' r='1'/%3E%3Ccircle cx='25' cy='25' r='1'/%3E%3Ccircle cx='75' cy='75' r='1'/%3E%3Ccircle cx='75' cy='25' r='1'/%3E%3Ccircle cx='25' cy='75' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Montserrat', sans-serif;
+  }
+}
