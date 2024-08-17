@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import FadeUp from "@/animation/fade-up";
-
 
 export default function LandingHero() {
   const [scrollY, setScrollY] = useState(0);
+  const [showVideo, setShowVideo] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   let progress = 0;
@@ -26,96 +27,102 @@ export default function LandingHero() {
 
   return (
     <motion.section
-      animate={{
-        transform: `translateY(${progress * 20}vh)`,
-      }}
-      transition={{ type: "spring", stiffness: 100 }}
+      // animate={{
+      //   transform: `translateY(${progress * 20}vh)`,
+      // }}
+      // transition={{ type: "spring", stiffness: 100 }}
       ref={ref}
-      className="relative min-h-[calc(100vh-200px)] flex items-center px-4 sm:px-6 md:px-8 lg:px-12"
+      className="relative z-8 min-h-[calc(100vh-200px)] flex items-center px-4 sm:px-6 md:px-8 lg:px-12"
     >
-      <div className="absolute inset-0 bg-orange-200 opacity-20 z-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0">
-          <path fill="#F3F4F6" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,181.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-      </div>
-      <div className="relative z-10 w-full max-w-7xl mx-auto">
-        {/* Changed to flex-col to stack items vertically */}
-        <div className="flex flex-col items-center justify-center">
-          {/* Removed lg:w-1/2 and adjusted text alignment */}
-          <div className="w-full text-center mt-10">
+      <div className="relative z-8 w-full max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center">
+          <div className="w-full lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0 order-2 lg:order-1">
             <AnimatePresence>
-              <FadeUp key="title-main" duration={0.6}>
-                {/* Increased text size for better visibility */}
-                {/* <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white mb-4"> */}
-                <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
 
-                  Dr. Anivita Aggarwal
+              <FadeUp key="subtitle" duration={0.6} delay={0.2}>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-new font-semibold mb-4">
+                  <span className="inline-block bg-coffee text-accent rounded-[90%] px-2 py-1">
+                    Infectious
+                  </span>{" "}
+                  <span className="inline-block text-zinc-400 rounded-full px-2 py-1">
+                    Diseases Specialist
+                  </span>
                 </h1>
               </FadeUp>
-              <FadeUp key="position" duration={0.6}>
-                {/* Adjusted text size for better hierarchy 
-                <h3 className="text-md md:text-3xl lg:text-2xl font-bold text-gray-400 mb-2">*/}
-                <h3 className="text-md md:text-3xl lg:text-2xl font-bold text-muted-foreground mb-2">
-
-                  M.B.B.S., D.M. (Infectious Diseases)
-                </h3>
-              </FadeUp>
-              <FadeUp key="subtitle" duration={0.6} delay={0.2}>
-                {/* Increased max-width for better readability on larger screens 
-                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-accent font-semibold mb-4 max-w-3xl mx-auto">*/}
-                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-accent font-semibold mb-4 max-w-3xl mx-auto">
-
-                  Infectious Diseases Specialist with expertise in difficult-to-treat infections
-                </p>
-              </FadeUp>
               <FadeUp key="description" duration={0.6} delay={0.4}>
-                {/* Increased text size and added max-width for better readability 
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-700 dark:text-zinc-300 mb-8 max-w-2xl mx-auto">*/}
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-8 max-w-2xl mx-auto">
-
-                  Passionate about managing complex infectious diseases and improving patient outcomes!
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-8">
+                  Expertise in difficult-to-treat infections. Passionate about managing complex infectious diseases and improving patient outcomes!
                 </p>
               </FadeUp>
               <FadeUp key="cta" duration={0.6} delay={0.6}>
-                {/* Centered buttons and increased spacing */}
-                <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                  {/* Increased button size for better visibility 
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6 items-center">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center px-6 py-4 border border-transparent text-md font-medium rounded-md text-white bg-gray-950 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-2.5 lg:px-5 lg:py-2 xl:px-6 xl:py-2.5 border 
+                    border-transparent text-base sm:text-lg md:text-xl font-medium rounded-md 
+                    text-primary-foreground bg-gradient-to-r from-[#6e5e5d] to-[#3b2e2d] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300 ease-in-out transform hover:scale-105"
                   >
-              */}
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center px-6 py-4 border border-transparent text-md font-medium rounded-md text-primary-foreground bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    Book Appointment
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
+                    📑 Book Appointment
                   </Link>
-                  {/* Matched button size and adjusted colors for consistency 
-                  <Link
-                    href="/about"
-                    className="inline-flex items-center justify-center px-6 py-4 border border-gray-600 text-md font-medium rounded-md text-gray-900 bg-transparent hover:bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-            */}
-                  <Link
-                    href="/about"
-                    className="inline-flex items-center justify-center px-6 py-4 border border-primary text-md font-medium rounded-md text-primary bg-transparent hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
 
-                    Learn More about Me
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  <button
+                    onClick={() => setShowVideo(true)}
+                    className="inline-flex items-center justify-center transform hover:scale-105"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 animate-pulse" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </FadeUp>
             </AnimatePresence>
           </div>
+          <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
+            <FadeUp key="title-main" duration={0.6}>
+              <p className="bg-orange-100 rounded-[40px] shadow-md text-sm lg:text-md py-2 lg:py-4 text-red-600 mb-4 inline-block px-4">
+                Expert care for complex infections, from HIV to post-COVID challenges
+              </p>
+            </FadeUp>
+            <Image
+              src="/images/hero1.png"
+              alt="Infectious Disease Specialist"
+              width={500}
+              height={500}
+              className="mx-auto lg:ml-auto"
+            />
+          </div>
+
         </div>
+
       </div>
+      <Image
+        src="/images/bg.png"
+        alt="background image"
+        className="right-hero"
+        objectFit="cover"
+        fill
+      />
+      {showVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative w-full max-w-4xl mx-4">
+            <button
+              onClick={() => setShowVideo(false)}
+              className="absolute -top-10 right-0 text-white text-xl"
+            >
+              X
+            </button>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                src="https://www.youtube.com/embed/your-video-id"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </motion.section>
   );
 }

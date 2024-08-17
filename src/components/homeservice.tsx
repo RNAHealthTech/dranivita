@@ -1,76 +1,130 @@
-import { useEffect, useState } from 'react';
-// import { motion } from 'framer-motion';
+import { useEffect, useState, useRef, RefObject } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaVirus, FaVirusSlash, FaBacteria, FaHospitalUser } from 'react-icons/fa';
 import dynamic from 'next/dynamic'
+
+
+interface Service {
+    image: string,
+    title: string,
+    description: string,
+    icon: React.ComponentType<{ className: string }>
+}
 
 const MotionDiv = dynamic(() => import('framer-motion').then((mod) => mod.motion.div), {
     ssr: false,
 })
 
-
-
 const services = [
     {
         icon: FaVirus,
         title: 'Fever of Unknown Origin',
-        description: 'Expert diagnosis and management of complex fever cases with unknown causes.'
+        description: 'Expert diagnosis and management of complex fever cases with unknown causes.',
+        image: '/images/fever.jpg'
     },
     {
         icon: FaVirusSlash,
         title: 'HIV and Tuberculosis',
-        description: 'Comprehensive care and treatment for HIV and difficult-to-treat Tuberculosis cases.'
+        description: 'Comprehensive care and treatment for HIV and difficult-to-treat Tuberculosis cases.',
+        image: '/images/hiv.jpg'
     },
     {
         icon: FaBacteria,
         title: 'Fungal Infections',
-        description: 'Specialized treatment for various fungal infections, including invasive and resistant strains.'
+        description: 'Specialized treatment for various fungal infections, including invasive and resistant strains.',
+        image: '/images/fungai.jpg'
     },
     {
         icon: FaHospitalUser,
         title: 'Transplant Infections',
-        description: 'Dedicated care for managing infections in transplant (HSCT and SOT) patients.'
+        description: 'Dedicated care for managing infections in transplant (HSCT and SOT) patients.',
+        image: '/images/infection.jpg'
     }
-
 ];
 
 const HomeServices = () => {
-
     const [isClient, setIsClient] = useState(false);
+    const [currentCardIndex, setCurrentCardIndex] = useState(0);
+    const [showExploreButton, setShowExploreButton] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const sectionRef: RefObject<HTMLDivElement> = useRef(null);
 
     useEffect(() => {
         setIsClient(true);
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
     }, []);
+
+    useEffect(() => {
+        if (!isMobile || !sectionRef.current) return;
+
+        const handleScroll = () => {
+            const sectionRect = sectionRef.current!.getBoundingClientRect();
+            const sectionHeight = sectionRect.height;
+            const sectionTop = sectionRect.top;
+            const windowHeight = window.innerHeight;
+
+            const scrollProgress = (windowHeight - sectionTop) / sectionHeight;
+            const newIndex = Math.min(Math.floor(scrollProgress * services.length), services.length - 1);
+
+            setCurrentCardIndex(newIndex);
+            setShowExploreButton(scrollProgress >= 1);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isMobile]);
 
     if (!isClient) {
         return null;
     }
 
+    const renderCard = (service: Service, index: number) => (
+        <MotionDiv
+            key={index}
+            className="bg-white rounded-xl shadow-lg overflow-hidden"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className="relative h-48 w-full ring-1 ring-zinc-100/50 backdrop-blur-md">
+                <Image
+                    src={service?.image}
+                    alt={service?.title}
+                    layout="fill"
+                    objectFit="cover"
+                />
+
+            </div>
+            <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">{service?.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">{service?.description}</p>
+
+            </div>
+        </MotionDiv>
+    );
+
     return (
-        <section className="py-16 bg-white rounded-3xl my-8  mt-16">
+        <section ref={sectionRef} className="py-16 bg-gray-50 rounded-3xl my-8 mt-8 relative">
             <div className="container mx-auto px-4">
-                <div>
-                    <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">Our Services</h2>
-                </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {services.map((service, index) => (
-                        <MotionDiv
-                            key={index}
-                            className="bg-coffee p-6 rounded-lg shadow-md text-center cursor-pointer"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <service.icon className="text-4xl text-slate-500 mb-4 mx-auto" />
-                            <div>
-                                <h3 className="text-xl font-semibold mb-2 text-gray-800">{service.title}</h3>
-                                <p className="text-gray-600">{service.description}</p>
-                            </div>
-                        </MotionDiv>
-                    ))}
-                </div>
-                <div className="text-center mt-12">
-                    <Link href="/services" className="inline-flex items-center justify-center px-6 py-4 border border-transparent text-md font-medium rounded-md text-white bg-gray-950 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
-                    >
+                <h2 className="text-4xl font-bold mb-6 text-gray-800 text-center">Our Specialized Services</h2>
+                {isMobile ? (
+                    <div style={{ height: `${services.length * 80}vh` }}>
+                        <div className="sticky top-10 h-[calc(100vh-10rem)] flex items-center justify-center">
+                            {renderCard(services[currentCardIndex], currentCardIndex)}
+                        </div>
+                    </div>
+                ) : (
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {services.map((service, index) => renderCard(service, index))}
+                    </div>
+                )}
+                <div className={`text-center mt-8 ${isMobile ? 'sticky bottom-4 z-10' : ''}`}>
+                    <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-md 
+                    text-white bg-gradient-to-r from-[#6e5e5d] to-[#3b2e2d] hover:from-[#5f4a49] hover:to-[#4b3e3d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4f3a39] transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Explore All Services
                     </Link>
                 </div>

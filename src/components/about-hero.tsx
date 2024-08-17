@@ -10,13 +10,7 @@ import InImg from "@/public/images/in.png";
 export default function AboutHero() {
   return (
     <div className="relative overflow-hidden mx-auto mt-0 flex max-w-7xl flex-col items-center gap-6 px-6 pt-20 text-center sm:px-14 md:mt-20 md:px-20 lg:mt-0 lg:flex-row lg:text-left">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-orange-100 opacity-20"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0">
-          <path fill="#FFF" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,181.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-
-      </div>
+      
       <div className="w-full sm:w-1/2 md:w-2/3 lg:inline-block lg:h-full lg:w-1/2 relative z-8">
         <AnimatePresence>
           <FadeUp key="hero-image" duration={0.6}>

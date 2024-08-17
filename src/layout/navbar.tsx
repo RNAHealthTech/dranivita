@@ -30,12 +30,8 @@ export default function Navbar(props: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-[9999] mt-2 px-6 py-8 sm:mt-0 sm:px-14 md:px-20">
-      <div className="absolute inset-0 bg-orange-200 opacity-20 z-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0">
-                    <path fill="#F3F4F6" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,181.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                </svg>
-            </div>
+    <header className="sticky top-2 z-50 py-2 mb-12 md:mb-0 md:px-8 ring-1 ring-zinc-600 backdrop-blur-md rounded-full shadow-md">
+     
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl relative z-10">
         <Link
           href="/"
@@ -46,7 +42,7 @@ export default function Navbar(props: NavbarProps) {
             <AnimatedLogo />
           </div>
         </Link>
-        <nav className="hidden items-center gap-2 px-2 py-2 backdrop-blur-md dark:ring-accent/50 md:flex">
+        <nav className="hidden items-center gap-2 rounded-full px-2 py-2 md:flex">
           <ul className="flex gap-2 text-sm font-medium">
             {props.routes.map((_link, index) => {
               return (
@@ -58,9 +54,9 @@ export default function Navbar(props: NavbarProps) {
                     href={_link.href}
                     className={classNames(
                       pathName === _link.href
-                        ? "font-semibold text-background dark:hover:text-foreground"
-                        : "text-foreground",
-                      "group relative mx-3 px-3 py-2 transition-colors duration-200",
+                        ? "font-semibold text-[#3b2e2d] dark:hover:text-[#6e5e5d]"
+                        : "text-[#3b2e2d]",
+                      "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
                     )}
                   >
                     {_link.href === pathName && (
@@ -75,7 +71,7 @@ export default function Navbar(props: NavbarProps) {
                             },
                           },
                         }}
-                        className="absolute inset-0 -z-10  bg-accent group-hover:bg-accent/80"
+                        className="absolute inset-0 -z-10 rounded-full bg-gray-100 group-hover:bg-gray-100/80"
                       ></motion.span>
                     )}
                     {_link.title}

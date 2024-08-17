@@ -24,7 +24,7 @@ const SocialLink = ({ href, icon: Icon }: { href: string, icon: React.ElementTyp
 export default function Footer() {
   return (
     <AnimatePresence>
-      <footer className="w-full bg-black grid-pattern text-white rounded-t-[3rem] shadow-2xl relative overflow-hidden">
+      <footer className="w-full bg-gradient-to-r from-[#6e5e5d] to-[#3b2e2d] grid-pattern text-white rounded-t-[3rem] shadow-2xl relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="flex flex-col md:flex-row justify-between">
@@ -60,11 +60,7 @@ export default function Footer() {
                       <li><FooterLink href="/services">Services</FooterLink></li>
                       <li><FooterLink href="/about">About</FooterLink></li>
                       <li><FooterLink href="/contact">Contact</FooterLink></li>
-                      <li>
-                        <a href={siteMetadata.profile} target="_blank" rel="noopener noreferrer" className="text-md md:text-sm hover:underline transition-all duration-300 text-white/80 hover:text-white">
-                          Profile
-                        </a>
-                      </li>
+                    
                     </ul>
                   </div>
                 </FadeUp>

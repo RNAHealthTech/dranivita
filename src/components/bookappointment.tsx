@@ -9,13 +9,7 @@ const BookAppointment = () => {
 
   return (
     <section className="py-16 my-8 relative overflow-hidden">
-      <div  className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-orange-100 opacity-20"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0">
-          <path fill="#FFF" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,181.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-        
-      </div>
+      
       <div className="container mx-auto px-4 relative z-8">
         <h2 className="text-3xl font-bold mb-8 text-accent text-center">Book An Appointment</h2>
         <div className="flex flex-col md:flex-row justify-between items-start">
@@ -27,7 +21,7 @@ const BookAppointment = () => {
               <FeatureCard
                 icon={<FaUserMd className="text-zinc-500" />}
                 title="Expert Care"
-                description="Consult with a leading endocrinologist"
+                description="Consult with an infectious disease expert from AIIMS"
               />
               <FeatureCard
                 icon={<FaCalendarAlt className="text-zinc-500" />}
@@ -37,7 +31,7 @@ const BookAppointment = () => {
               <FeatureCard
                 icon={<FaClinicMedical className="text-zinc-500" />}
                 title="State-of-the-art Facility"
-                description="Visit our modern clinic at Sir Ganga Ram Hospital"
+                description="OPD at Sir Ganga Ram Hospital"
               />
             </div>
           </div>
@@ -128,7 +122,7 @@ const BookAppointment = () => {
                     <div className="text-center">
                       <motion.button
                         type="submit"
-                        className="inline-flex items-center justify-center px-6 py-4 border border-transparent text-md font-medium rounded-md text-white bg-gray-950 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
+                        className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-md text-white bg-gradient-to-r from-[#6e5e5d] to-[#3b2e2d] hover:from-[#5f4a49] hover:to-[#4b3e3d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4f3a39] transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >

@@ -100,7 +100,8 @@ const HomeBlog = () => {
 
                 </div>
                 <div className="text-center mt-8">
-                    <Link href="/blog" className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-md font-medium rounded-md text-white bg-gray-950 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <Link href="/blog"
+                     className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-md text-white bg-gradient-to-r from-[#6e5e5d] to-[#3b2e2d] hover:from-[#5f4a49] hover:to-[#4b3e3d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4f3a39] transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl">
                         View All Blogs
                     </Link>
                 </div>

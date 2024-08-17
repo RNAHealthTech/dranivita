@@ -6,6 +6,7 @@ import LandingHero from "@/components/landing-hero";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import BookAppointment from "@/components/bookappointment";
 import HomeServices from "@/components/homeservice";
+import HomeAbout from "@/components/home-about";
 
 const HomeBlog = dynamic(() => import('@/components/homeblog'), { ssr: false });
 
@@ -44,6 +45,7 @@ export default function Home() {
       {/*<CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full" />*/}
       <main>
         <LandingHero />
+        <HomeAbout /> 
         <HomeServices />
         <HomeBlog />
         <BookAppointment />

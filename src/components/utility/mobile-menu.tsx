@@ -38,18 +38,18 @@ export default function MobileMenu({
             leaveFrom="opacity-100 bottom-[15%]"
             leaveTo="opacity-0 bottom-full"
           >
-            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-accent/20 bg-background px-6 py-8 text-accent shadow-lg shadow-accent/10 md:px-10 md:py-16">
+            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-accent/20 bg-white px-6 py-8 text-zinc-800 shadow-lg shadow-accent/10 md:px-10 md:py-16">
               <div className="pointer-events-auto flex flex-col items-center gap-6 text-center">
                 {routes.map((link, i) => (
                   <button
                     key={i}
-                    className="group relative py-2 text-2xl font-medium text-accent"
+                    className="group relative py-2 text-2xl font-medium text-zinc-800"
                     onClick={() => handleClick(link.href)}
                   >
                     <span
                       className={classNames(
                         pathName === link.href ? "w-full" : "w-0",
-                        "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
+                        "absolute -bottom-1 left-0 h-1 rounded-lg transition-[width] duration-300 group-hover:w-full",
                       )}
                     ></span>
                     {link.title}
