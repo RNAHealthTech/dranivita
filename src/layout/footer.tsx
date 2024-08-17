@@ -84,7 +84,7 @@ export default function Footer() {
                   <div className="space-y-1 md:space-y-2">
                     {[
                       { icon: <PhoneCallIcon className="h-4 w-4 md:h-5 md:w-5" href="tel:+011-42254000" />, content: "+011-42254000" },
-                      { icon: <MailIcon className="h-4 w-4 md:h-5 md:w-5" href="mailto:anivita.aggarwal@sgrh.com" />, content: "anivita.aggarwal@sgrh.com" },
+                      { icon: <MailIcon className="h-4 w-4 md:h-5 md:w-5" href="mailto:anivita1513@gamil.com" />, content: siteMetadata.email },
                       { icon: <MapPinned className="h-4 w-4 md:h-5 md:w-5" />, content: "Sir Ganga Ram Hospital, New Delhi" },
                     ].map((item, index) => (
                       <p key={index} className="flex items-center space-x-2">
