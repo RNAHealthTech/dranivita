@@ -111,13 +111,14 @@ export default function LandingHero() {
             >
               X
             </button>
-            <div className="aspect-w-16 aspect-h-9">
+
+            <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
               <iframe
-                src="https://www.youtube.com/embed/your-video-id"
+                src="https://www.youtube.com/embed/D0nfPORtUXc?si=fYUJwt-SvHrxtzxE&amp;start=203"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-full"
+                className="absolute top-0 left-0 w-full h-full"
               ></iframe>
             </div>
           </div>
