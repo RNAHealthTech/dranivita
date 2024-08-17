@@ -14,18 +14,18 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Dr. Setu Gupta | Expert Endocrinologist in Delhi"
-        description="Dr. Setu Gupta is a highly experienced Endocrinologist with 9 years of expertise, specializing in Diabetes, Thyroid Disorders, and Growth-related issues. Currently practicing at Sir Ganga Ram Hospital and Karuna Hospital in Delhi."
+        title="Dr. Anivita Aggarwal | Expert Infectious Diseases Specialist in Delhi"
+        description="Dr. Anivita Aggarwal is a highly experienced Infectious Diseases specialist with 8 years of expertise, specializing in managing difficult-to-treat infections, HIV, Tuberculosis, fungal infections, and adult vaccination. Currently practicing at Sir Ganga Ram Hospital and Karuna Hospital in Delhi."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Dr. Setu Gupta - Leading Endocrinologist in Delhi",
+          title: "Dr. Anivita Aggarwal - Leading Infectious Diseases Specialist in Delhi",
           description:
-            "Discover the expertise of Dr. Setu Gupta, a renowned Endocrinologist with 9 years of experience. Specializing in Diabetes, Thyroid Disorders, and Growth issues, Dr. Gupta provides expert care at Sir Ganga Ram Hospital and Karuna Hospital in Delhi.",
+            "Explore the extensive expertise of Dr. Anivita Aggarwal, a renowned Infectious Diseases consultant with 8 years of experience. Specializing in fever of unknown origin, HIV, Tuberculosis, fungal infections, transplant infections, and sepsis. Dr. Aggarwal provides expert care at Sir Ganga Ram Hospital and Karuna Hospital in Delhi.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Dr. Setu Gupta - Professional Portrait",
+              alt: "Dr. Anivita Aggarwal - Professional Portrait",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -38,14 +38,15 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "Endocrinologist, Dr. Setu Gupta, Delhi, Diabetes, Thyroid Disorders, Growth Disorders, Hypertension, Osteoporosis, Pubertal Disorders, Sir Ganga Ram Hospital, Karuna Hospital",
+              "Infectious Diseases, Dr. Anivita Aggarwal, Delhi, Fever of Unknown Origin, HIV, Tuberculosis, Fungal Infections, Adult Vaccination, Sepsis, Transplant Infections, Karuna Hospital, Sir Ganga Ram Hospital",
           },
         ]}
       />
+
       {/*<CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full" />*/}
       <main>
         <LandingHero />
-        <HomeAbout /> 
+        <HomeAbout />
         <HomeServices />
         <HomeBlog />
         <BookAppointment />

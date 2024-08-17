@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <>
         <NextSeo
-        title="Book Your Appointment with Dr. Anivita Aggarwal"
+        title="Book Your Appointment | Dr. Anivita Aggarwal"
         description="Book an appointment for consultation session with Dr. Anivita Aggarwal. Expert in Infectious Diseases, including HIV, TB, and COVID-19 management."
         canonical={`${siteMetadata.siteUrl}/contact`}
         openGraph={{

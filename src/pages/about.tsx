@@ -14,18 +14,18 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="Dr. Setu Gupta | Best Endocrinologist in Delhi"
-        description="Dr. Setu Gupta is a leading Adult & Pediatric Endocrine, Diabetes and Metabolism Specialist in Delhi. Senior consultant at Sir Ganga Ram Hospital and Karuna Hospital, Dilshad Garden."
+        title="Dr. Anivita Aggarwal | Best Infectious Diseases Specialist in Delhi"
+        description="Dr. Anivita Aggarwal is a leading Infectious Diseases Specialist in Delhi, with extensive experience in managing difficult-to-treat infections, HIV, Tuberculosis, and adult vaccination. Senior consultant at Sir Ganga Ram Hospital and Karuna Hospital, Dilshad Garden."
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Dr. Setu Gupta - Best Endocrinologist in Delhi",
+          title: "Dr. Anivita Aggarwal - Best Infectious Diseases Specialist in Delhi",
           description:
-            "Meet Dr. Setu Gupta, a renowned Endocrinologist specializing in Adult & Pediatric Endocrine, Diabetes, and Metabolism. Senior consultant at Sir Ganga Ram Hospital and Karuna Hospital, Delhi.",
+            "Learn more about Dr. Anivita Aggarwal, a renowned Infectious Diseases consultant specializing in complex infections, HIV, Tuberculosis, and adult vaccination. Senior consultant at Sir Ganga Ram Hospital and Karuna Hospital, Delhi.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Dr. Setu Gupta - Endocrinologist",
+              alt: "Dr. Anivita Aggarwal - Infectious Diseases Specialist",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -38,25 +38,26 @@ export default function About() {
           {
             property: "keywords",
             content:
-              "Dr. Setu Gupta, Endocrinologist, Delhi, Adult Endocrine, Pediatric Endocrine, Diabetes Specialist, Metabolism Specialist, Sir Ganga Ram Hospital, Karuna Hospital, Dilshad Garden",
+              "Dr. Anivita Aggarwal, Infectious Diseases, Delhi, HIV, Tuberculosis, Fungal Infections, Sepsis, Transplant Infections, Adult Vaccination, Sir Ganga Ram Hospital, Karuna Hospital, Dilshad Garden",
           },
         ]}
       />
+
       <AboutHero />
       <div className="mx-auto my-40 max-w-7xl px-6 sm:px-14 md:my-60 md:px-20">
-          <DropdownSection title="Experience">
+        <DropdownSection title="Experience">
           <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-          </DropdownSection>
-          <DropdownSection title="Education">
+        </DropdownSection>
+        <DropdownSection title="Education">
           <EducationShowcaseList title="Education" details={EDUCATION} />
-          </DropdownSection>
-          <DropdownSection title="Research">
+        </DropdownSection>
+        <DropdownSection title="Research">
           <ResearchPaperList title="Research" details={RESEARCH_PAPER} />
-          </DropdownSection>
+        </DropdownSection>
       </div>
-    
-     
-  
+
+
+
     </>
   );
 }
