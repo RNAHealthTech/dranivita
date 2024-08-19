@@ -33,8 +33,8 @@ const HomeAbout: FC = () => {
   }
 
   return (
-    <section id="home-about" className='mt-8 relative overflow-hidden'>
-      <div className="absolute top-0 left-0 w-full h-full opacity-50"></div>
+    <section id="home-about" className='mt-8 relative overflow-hidden z-0'>
+      <div className="absolute z-10 top-0 left-0 w-full h-full opacity-50"></div>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}

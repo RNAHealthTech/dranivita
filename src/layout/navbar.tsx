@@ -30,7 +30,7 @@ export default function Navbar(props: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-2 z-50 py-2 mb-12 md:mb-0 md:px-8 ring-1 ring-zinc-600 backdrop-blur-md rounded-full shadow-md">
+    <header className="sticky top-0 z-50 py-2 mb-12 md:mb-0 md:px-8 ring-1 ring-white backdrop-blur-md shadow-md">
      
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl relative z-10">
         <Link
@@ -38,7 +38,7 @@ export default function Navbar(props: NavbarProps) {
           className="drop-shadow-teralight flex items-center justify-center"
           aria-label="Return to home page"
         >
-          <div className="relative h-12 w-12 sm:h-14 sm:w-14">
+          <div className="relative h-11 w-11 sm:h-12 sm:w-12">
             <AnimatedLogo />
           </div>
         </Link>

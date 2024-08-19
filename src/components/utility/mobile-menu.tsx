@@ -1,11 +1,10 @@
 import { Dispatch, Fragment, SetStateAction } from "react";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
-
 import { Dialog, Transition } from "@headlessui/react";
-
 import { type NavbarProps } from "@/layout/navbar";
 import { classNames } from "@/utility/classNames";
+
 
 export interface MobileMenuProps extends NavbarProps {
   openMenu: boolean;
@@ -38,7 +37,7 @@ export default function MobileMenu({
             leaveFrom="opacity-100 bottom-[15%]"
             leaveTo="opacity-0 bottom-full"
           >
-            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-accent/20 bg-white px-6 py-8 text-zinc-800 shadow-lg shadow-accent/10 md:px-10 md:py-16">
+            <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-3xl border-2 border-accent/20 bg-white px-6 py-8 text-zinc-800 shadow-lg shadow-accent/10 md:px-10 md:py-16">
               <div className="pointer-events-auto flex flex-col items-center gap-6 text-center">
                 {routes.map((link, i) => (
                   <button
