@@ -30,7 +30,7 @@ export default function Navbar(props: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 py-2 mb-12 md:mb-0 md:px-8 ring-1 ring-white backdrop-blur-md shadow-md">
+    <header className="sticky top-0 z-50 py-2 mb-12 md:mb-0 md:px-8 ring-1 ring-white backdrop-blur-md">
      
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl relative z-10">
         <Link
