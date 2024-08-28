@@ -32,6 +32,25 @@
 }
 
 @layer components {
+  .looka-logo {
+    width: 300px;
+    height: auto;
+    
+    max-width: 1000px;
+  }
+
+  @media (min-width:768px) {
+     .looka-logo {
+      width: 500px;
+     }
+  }
+
+  @media (min-width: 1024px) {
+      .looka-logo {
+        width: 500px; 
+      }
+  }
+
   .right-hero {
     @apply absolute w-[900px] -top-[380px] -right-[270px] -z-10;
   }

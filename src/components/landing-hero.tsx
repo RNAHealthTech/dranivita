@@ -45,7 +45,7 @@ export default function LandingHero() {
                     Infectious
                   </span>{" "}
                   <span className="inline-block text-zinc-400 rounded-full px-2 py-1">
-                    Diseases Specialist
+                    Disease Specialist
                   </span>
                 </h1>
               </FadeUp>
@@ -77,19 +77,31 @@ export default function LandingHero() {
               </FadeUp>
             </AnimatePresence>
           </div>
-          <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-8 lg:mb-0">
+          <div className="w-full lg:w-1/2 text-center order-1 lg:order-2 mb-8 lg:mb-0">
             <FadeUp key="title-main" duration={0.6}>
-              <p className="bg-orange-100 rounded-[40px] shadow-md text-sm lg:text-md py-2 lg:py-4 text-red-600 mb-4 inline-block px-4">
-                Expert care for complex infections, from HIV to post-COVID challenges
+              <p className="bg-orange-100 text-center rounded-[40px] shadow-md text-sm lg:text-md py-2 lg:py-4 text-red-600 mb-4 inline-block px-4">
+                Expert care for complex Infections
               </p>
             </FadeUp>
-            <Image
-              src="/images/hero1.png"
-              alt="Infectious Disease Specialist"
-              width={500}
-              height={500}
-              className="mx-auto lg:ml-auto"
-            />
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
+              <Image
+                src="/images/srghlogo.png"
+                alt="Sir Ganga Ram Hospital Logo"
+                width={400}
+                height={400}
+                className="w-56 h-40 p-4 object-contain"
+              />
+              <Image
+                src="/images/karuna-logo.png"
+                alt="Karuna Hospital Logo"
+                width={400}
+                height={400}
+                className="w-56 h-40 p-4 object-contain"
+              />
+            </div>
+            <p className="text-sm md:text-base lg:text-lg font-medium text-zinc-700 dark:text-zinc-300">
+              Consultant at Sir Ganga Ram Hospital & Karuna Hospital
+            </p>
           </div>
 
         </div>

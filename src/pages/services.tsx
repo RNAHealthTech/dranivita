@@ -12,66 +12,46 @@ interface ServiceArea {
 }
 
 const serviceAreas: ServiceArea[] = [
+
   {
-    name: "Fever of Unknown Origin",
-    icon: "🌡️",
-    description: "Expert diagnosis and management of complex fever cases with unknown causes.",
-    keywords: ["Pyrexia", "Persistent Fever", "Diagnostic Challenges"]
+    name: "Bone & Joint Infections",
+    icon: "🦴",
+    description: "Diagnosis and treatment of infections affecting bones and joints.",
+    keywords: ["Osteomyelitis", "Septic Arthritis", "Orthopedic Infections"]
   },
   {
-    name: "HIV Management",
+    name: "Parasitic Diseases",
     icon: "🦠",
-    description: "Comprehensive care and treatment for individuals living with HIV.",
-    keywords: ["Antiretroviral Therapy", "Opportunistic Infections", "HIV Prevention"]
+    description: "Management of infections caused by parasites, including diagnosis and treatment.",
+    keywords: ["Malaria", "Helminth Infections", "Protozoal Diseases"]
   },
   {
-    name: "Tuberculosis (TB)",
-    icon: "🫁",
-    description: "Specialized treatment for difficult-to-treat TB cases, including drug-resistant strains.",
-    keywords: ["Multi-Drug Resistant TB", "Extrapulmonary TB", "TB Treatment"]
+    name: "Immunodeficiencies",
+    icon: "🛡️",
+    description: "Evaluation and treatment of disorders affecting the immune system.",
+    keywords: ["Primary Immunodeficiency", "HIV/AIDS", "Immune System Disorders"]
   },
   {
-    name: "Fungal Infections",
-    icon: "🍄",
-    description: "Advanced diagnosis and treatment of various fungal infections.",
-    keywords: ["Invasive Fungal Infections", "Antifungal Therapy", "Candidiasis"]
+    name: "Viral Infections",
+    icon: "🦠",
+    description: "Comprehensive care for various viral infections and their complications.",
+    keywords: ["Hepatitis", "Influenza", "Herpes Viruses"]
   },
+  {
+    name: "Travel Advice",
+    icon: "✈️",
+    description: "Pre-travel consultations and vaccinations for international travelers.",
+    keywords: ["Travel Vaccines", "Malaria Prophylaxis", "Health Precautions"]
+  },
+
   {
     name: "Adult Vaccination",
     icon: "💉",
     description: "Tailored vaccination plans for adults to prevent infectious diseases.",
     keywords: ["Immunization", "Vaccine Schedules", "Preventive Care"]
   },
-  {
-    name: "Transplant Infections",
-    icon: "🫀",
-    description: "Management of infections in transplant (HSCT and SOT) patients.",
-    keywords: ["Immunosuppression", "Opportunistic Infections", "Post-Transplant Care"]
-  },
-  {
-    name: "Sepsis Management",
-    icon: "🚨",
-    description: "Rapid response and treatment for sepsis and septic shock.",
-    keywords: ["Septic Shock", "Antimicrobial Therapy", "Critical Care"]
-  },
-  {
-    name: "COVID-19 and Post-COVID Care",
-    icon: "😷",
-    description: "Treatment for active COVID-19 cases and management of post-COVID complications.",
-    keywords: ["Long COVID", "COVID-19 Variants", "Respiratory Support"]
-  },
-  {
-    name: "ICU Infections",
-    icon: "🏥",
-    description: "Specialized care for infections acquired in intensive care settings.",
-    keywords: ["Hospital-Acquired Infections", "Ventilator-Associated Pneumonia", "Catheter-Related Infections"]
-  },
-  {
-    name: "Brain Infections",
-    icon: "🧠",
-    description: "Diagnosis and treatment of various infections affecting the brain and nervous system.",
-    keywords: ["Meningitis", "Encephalitis", "Brain Abscess"]
-  }
+
+
 ];
 
 export default function Services() {
@@ -105,7 +85,7 @@ export default function Services() {
         ]}
       />
       <section className="container mx-auto px-4 py-12 mt-2">
-         
+
 
         <h1 className="text-5xl lg:text-5xl font-bold mb-6 text-center text-accent">Services</h1>
 

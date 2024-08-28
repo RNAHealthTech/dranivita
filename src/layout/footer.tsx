@@ -35,7 +35,7 @@ export default function Footer() {
               <FadeUp key="footer-heading" whileInView duration={0.6}>
                 <h3 className="text-3xl md:text-2xl lg:text-4xl font-semibold ml-2 mb-2">Dr. Anivita Aggarwal</h3>
                 <p className="text-xs md:text-sm text-white/80 mt-4 mb-6 max-w-xs">
-                  Infectious Diseases consultant with extensive experience in managing difficult to treat infections, including transplant-related infections, HIV, Tuberculosis, and COVID-19.
+                  Infectious Diseases consultant with extensive experience in managing difficult to treat infections, including transplant-related infections, Adult Vaccination HIV, Tuberculosis, and COVID-19.
                 </p>
               </FadeUp>
               <FadeRight key="footer-socials" duration={0.6}>
@@ -102,7 +102,7 @@ export default function Footer() {
               <p className="text-xs md:text-sm text-white/80">&copy; {new Date().getFullYear()} Dr. Anivita Aggarwal. All rights reserved.</p>
 
               <p className="text-xs md:text-sm text-white/80">
-                Created by <a href="https://rnahealthtech.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">RNA HealthTech</a>
+               Website by <a href="https://rnahealthtech.com" target="_blank" rel="noopener noreferrer" className="text-white transition-colors">RNA HealthTech</a>
               </p>
             </div>
           </FadeUp>

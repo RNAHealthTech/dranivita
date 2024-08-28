@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo";
 import dynamic from 'next/dynamic';
 
 import LandingHero from "@/components/landing-hero";
-// import CursorTrailCanvas from "@/components/cursor-trail-canvas";
+import CursorTrailCanvas from "@/components/cursor-trail-canvas";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import BookAppointment from "@/components/bookappointment";
 import HomeServices from "@/components/homeservice";
@@ -43,7 +43,7 @@ export default function Home() {
         ]}
       />
 
-      {/*<CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full" />*/}
+      <CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full" />
       <main>
         <LandingHero />
         <HomeAbout />

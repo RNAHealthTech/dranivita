@@ -9,8 +9,8 @@ export default function AnimatedLogo({ color = "#060606" }: AnimatedLogoProps) {
 
   return (
     <AnimatePresence>
-      <motion.svg width="256.09999999999997" height="41.584282707158515"
-        viewBox="-10 0.8 379.7368421052631 60.036085003347495" className="looka-1j8o68f">
+      <motion.svg 
+        viewBox="-10 0.8 379.7368421052631 60.036085003347495" className="looka-logo">
         <defs id="SvgjsDefs2764"></defs>
         <motion.g id="SvgjsG2765" 
           transform="matrix(0.6460731749732928,0,0,0.6460731749732928,-4.672401120075925,-1.6717550937278496)"

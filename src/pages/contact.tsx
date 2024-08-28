@@ -65,7 +65,7 @@ export default function Contact() {
                   <FaClock className="mr-2" /> Consultation Hours
                 </h2>
                 <p className="text-foreground">Mon, Wed, Fri: 06:00 PM - 08:00 PM (Room No. F-30)</p>
-                <p className="text-foreground">Friday: 11:00 AM - 12:00 PM (Room No. G-1)</p>
+                <p className="text-foreground"></p>
               </FadeUp>
             </div>
                 <div>

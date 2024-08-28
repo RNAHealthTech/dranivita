@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, RefObject } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaVirus, FaVirusSlash, FaBacteria, FaHospitalUser } from 'react-icons/fa';
+import { FaVirus, FaSyringe, FaBone, FaBug, FaShieldVirus, FaPlane } from 'react-icons/fa';
 import dynamic from 'next/dynamic'
 
 
@@ -18,30 +18,42 @@ const MotionDiv = dynamic(() => import('framer-motion').then((mod) => mod.motion
 
 const services = [
     {
-        icon: FaVirus,
-        title: 'Fever of Unknown Origin',
-        description: 'Expert diagnosis and management of complex fever cases with unknown causes.',
-        image: '/images/fever.jpg'
+      icon: FaSyringe,
+      title: 'Adult Vaccination',
+      description: 'Tailored vaccination plans for adults to prevent infectious diseases.',
+      image: '/images/vaccination.jpg'
     },
     {
-        icon: FaVirusSlash,
-        title: 'HIV and Tuberculosis',
-        description: 'Comprehensive care and treatment for HIV and difficult-to-treat Tuberculosis cases.',
-        image: '/images/hiv.jpg'
+      icon: FaBone,
+      title: 'Bone & Joint Infections',
+      description: 'Diagnosis and treatment of infections affecting bones and joints.',
+      image: '/images/bone-joint.jpg'
     },
     {
-        icon: FaBacteria,
-        title: 'Fungal Infections',
-        description: 'Specialized treatment for various fungal infections, including invasive and resistant strains.',
-        image: '/images/fungai.jpg'
+      icon: FaBug,
+      title: 'Parasitic Diseases',
+      description: 'Management of infections caused by parasites, including diagnosis and treatment.',
+      image: '/images/parasitic.jpg'
     },
     {
-        icon: FaHospitalUser,
-        title: 'Transplant Infections',
-        description: 'Dedicated care for managing infections in transplant (HSCT and SOT) patients.',
-        image: '/images/infection.jpg'
+      icon: FaShieldVirus,
+      title: 'Immunodeficiencies',
+      description: 'Evaluation and treatment of disorders affecting the immune system.',
+      image: '/images/immunodeficiency.jpg'
+    },
+    {
+      icon: FaVirus,
+      title: 'Viral Infections',
+      description: 'Comprehensive care for various viral infections and their complications.',
+      image: '/images/infection.jpg'
+    },
+    {
+      icon: FaPlane,
+      title: 'Travel Advice',
+      description: 'Pre-travel consultations and vaccinations for international travelers.',
+      image: '/images/travel.jpg'
     }
-];
+  ]
 
 const HomeServices = () => {
     const [isClient, setIsClient] = useState(false);

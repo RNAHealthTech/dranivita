@@ -31,7 +31,7 @@ export default function Navbar(props: NavbarProps) {
 
   return (
     <header className="sticky top-0 z-50 py-2 mb-12 md:mb-0 md:px-8 ring-1 ring-white backdrop-blur-md">
-     
+
       <div className="mx-auto flex items-center justify-between lg:max-w-7xl relative z-10">
         <Link
           href="/"
@@ -82,9 +82,12 @@ export default function Navbar(props: NavbarProps) {
           </ul>
 
         </nav>
+        {/* Mobile menu button */}
+
         <AnimatePresence>
           <MenuLogo open={isModalOpen} toggle={toggleModal} />
         </AnimatePresence>
+
       </div>
 
       <MobileMenu
