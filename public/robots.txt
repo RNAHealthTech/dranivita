@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /
-Sitemap: https://setugupta.com/sitemap.xml
+Disallow: 
+
+Sitemap: https://dranivitaaggarwal.com/sitemap.xml

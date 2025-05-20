@@ -1,74 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://setugupta.com/about</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/contact</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/services</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/blog/endocrinology-hormonal-changes</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/blog/hormones-mental-health</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/blog/diabetes-management-innovations</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/blog</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/cgm-device.png</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/endocrine-system.png</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/heroProfile.png</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/hormonal-changes-lifecycle.png</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/hormone-brain-interaction.png</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/hpa-axis-diagram.png</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/innovative-insulin-delivery.jpg</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/logo.svg</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/non-invasive-glucose-monitor.png</loc>
-  </url>
-
-  <url>
-    <loc>https://setugupta.com/images/stem-cell-research.png</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <!-- Rockin' sitemap for dranivitaaggarwal.com, updated May 20, 2025 -->
+    <url>
+        <loc>https://dranivitaaggarwal.com/</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/about</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/contact</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/services</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/blog</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/blog/endocrinology-hormonal-changes</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/blog/hormones-mental-health</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/blog/diabetes-management-innovations</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Image URLs for that extra flair -->
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/bg.png</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/bg.png</image:loc>
+            <image:title>Background Image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/bone-joint.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/bone-joint.jpg</image:loc>
+            <image:title>Bone and Joint Health</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/fever.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/fever.jpg</image:loc>
+            <image:title>Fever Awareness</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/fungai.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/fungai.jpg</image:loc>
+            <image:title>Fungal Infections</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/hero1.png</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/hero1.png</image:loc>
+            <image:title>Hero Banner</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/heroProfile.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/heroProfile.jpg</image:loc>
+            <image:title>Profile Hero Image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/hiv.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/hiv.jpg</image:loc>
+            <image:title>HIV Awareness</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/immunodeficiency.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/immunodeficiency.jpg</image:loc>
+            <image:title>Immunodeficiency Info</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/in.png</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/in.png</image:loc>
+            <image:title>Icon Image</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/infection.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/infection.jpg</image:loc>
+            <image:title>Infection Awareness</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/karuna-logo.png</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/karuna-logo.png</image:loc>
+            <image:title>Karuna Logo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/logo.png</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/logo.png</image:loc>
+            <image:title>Site Logo PNG</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/logo.svg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/logo.svg</image:loc>
+            <image:title>Site Logo SVG</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/logo1.png</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/logo1.png</image:loc>
+            <image:title>Alternate Logo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/parasitic.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/parasitic.jpg</image:loc>
+            <image:title>Parasitic Infections</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/srghlogo.png</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/srghlogo.png</image:loc>
+            <image:title>SRGH Logo</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/travel.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/travel.jpg</image:loc>
+            <image:title>Travel Health</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://dranivitaaggarwal.com/images/vaccination.jpg</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <image:image>
+            <image:loc>https://dranivitaaggarwal.com/images/vaccination.jpg</image:loc>
+            <image:title>Vaccination Info</image:title>
+        </image:image>
+    </url>
 </urlset>

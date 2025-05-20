@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
-    "postbuild": "npm run sitemap",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sitemap": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./src/scripts/generateSitemap.mjs",
     "analyze": "cross-env ANALYZE=true next build",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
     "format:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,mdx,css,json}\"",
