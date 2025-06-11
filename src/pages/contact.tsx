@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import { NextSeo } from "next-seo";
 import { AnimatePresence, motion } from "framer-motion";
@@ -6,10 +6,85 @@ import FadeUp from "@/animation/fade-up";
 import { FaTwitter, FaLinkedin, FaFacebook, FaMapMarkerAlt, FaEnvelope, FaPhone, FaClock } from 'react-icons/fa';
 import { useForm, ValidationError } from "@formspree/react";
 import Map from "@/components/map/index";
+import { Phone } from "lucide-react";
+
+interface FormData {
+   name: string;
+   email: string;
+   phone: string;
+   date: string;
+   message: string;
+   [key:string]: string;  
+}
 
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm('xblrdjdp');
+  const [state, submitToFormspree] = useForm('xqabqayb');
+
+
+  const [formData, setFormData] = useState<FormData>({
+    name: "", 
+    email: "", 
+    phone: "",  
+    date: "", 
+    message:""
+  });
+
+  const handleChange = (e : React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,  
+
+  ) => {
+    const {name, value} = e.target;
+    setFormData((prev: FormData) => ({
+      ...prev, 
+      [name] : value, 
+    }));
+  };
+
+
+
+  const sendWhatsAppMessage = () => {
+    const message = `New Appointment Request:
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Date: ${formData.date}
+Message: ${formData.message}`;
+
+    const whatsappNumber = "918287186636";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
+  const finalHandleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      // Submit to Formspree using the form event directly
+      await submitToFormspree(e);
+
+      // Only send WhatsApp message if Formspree submission was successful
+      if (!state.errors) {
+        sendWhatsAppMessage();
+      }
+
+      // Clear form if everything is successful
+      if (state.succeeded) {
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          date: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
+
+  
 
 
 
@@ -72,7 +147,7 @@ export default function Contact() {
               <FadeUp key="phoneandemail" duration={0.6}>
                 <h2 className="text-xl md:text-2xl font-semibold mb-3 text-accent">Contact Information</h2>
                 <p className="text-foreground flex items-center mb-2"><FaEnvelope className="mr-2 text-accent" /> anivita.aggarwal@sgrh.com</p>
-                <p className="text-foreground flex items-center"><FaPhone className="mr-2 text-accent" /> +011-42254000</p>
+                <p className="text-foreground flex items-center"><FaPhone className="mr-2 text-accent" />+91-8287186636</p>
               </FadeUp>
             </div>
                 <div className="flex flex-row space-x-4 justify-start items-center mt-6">
@@ -113,7 +188,7 @@ export default function Contact() {
                 </motion.p>
               ) : (
                 <FadeUp key="form" duration={0.6} >
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={finalHandleSubmit} className="space-y-6">
                     {[
                       { id: "name", type: "text", label: "Name", placeholder: "Your Name" },
                       { id: "email", type: "email", label: "Email", placeholder: "your.email@example.com" },
@@ -128,6 +203,8 @@ export default function Contact() {
                           type={field.type}
                           id={field.id}
                           name={field.id}
+                          value={formData[field.id as keyof FormData]}
+                          onChange={handleChange}
                           required
                           placeholder={field.placeholder}
                           className="w-full p-3 border border-border rounded-md bg-background text-foreground focus:ring-2 focus:ring-accent transition"
@@ -143,6 +220,8 @@ export default function Contact() {
                         id="message"
                         name="message"
                         rows={4}
+                        value={formData.message}
+                        onChange={handleChange}
                         required
                         placeholder="Your message here..."
                         className="w-full p-3 border border-border rounded-md bg-background text-foreground focus:ring-2 focus:ring-accent transition"

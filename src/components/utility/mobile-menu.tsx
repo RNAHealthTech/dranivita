@@ -40,7 +40,7 @@ export default function MobileMenu({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black/50" aria-hidden="true" />
+          <div className="fixed inset-0 bg-black/80" aria-hidden="true" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto ring-1 ring-zinc-600 backdrop-blur-md">
