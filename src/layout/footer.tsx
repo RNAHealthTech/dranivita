@@ -83,7 +83,7 @@ export default function Footer() {
                 <FadeRight key="footer-icons" whileInView duration={0.6}>
                   <div className="space-y-1 md:space-y-2">
                     {[
-                      { icon: <PhoneCallIcon className="h-4 w-4 md:h-5 md:w-5" href="tel:+91-8287186636" />, content: "+91-8287186636" },
+                      { icon: <PhoneCallIcon className="h-4 w-4 md:h-5 md:w-5" href="tel:+91-8826766636" />, content: "+91-8826766636" },
                       { icon: <MailIcon className="h-4 w-4 md:h-5 md:w-5" href="mailto:anivita1513@gamil.com" />, content: siteMetadata.email },
                       { icon: <MapPinned className="h-4 w-4 md:h-5 md:w-5" />, content: "Sir Ganga Ram Hospital, New Delhi" },
                     ].map((item, index) => (

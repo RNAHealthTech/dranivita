@@ -6,7 +6,11 @@ import FadeUp from "@/animation/fade-up";
 import { FaTwitter, FaLinkedin, FaFacebook, FaMapMarkerAlt, FaEnvelope, FaPhone, FaClock } from 'react-icons/fa';
 import { useForm, ValidationError } from "@formspree/react";
 import Map from "@/components/map/index";
-import { Phone } from "lucide-react";
+import dynamic from 'next/dynamic';
+
+const MotionA = dynamic(() => import('framer-motion').then((mod) => mod.motion.a), {
+  ssr: false,
+});
 
 interface FormData {
    name: string;
@@ -50,7 +54,7 @@ Email: ${formData.email}
 Date: ${formData.date}
 Message: ${formData.message}`;
 
-    const whatsappNumber = "918287186636";
+    const whatsappNumber = "918826766636";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
@@ -147,7 +151,7 @@ Message: ${formData.message}`;
               <FadeUp key="phoneandemail" duration={0.6}>
                 <h2 className="text-xl md:text-2xl font-semibold mb-3 text-accent">Contact Information</h2>
                 <p className="text-foreground flex items-center mb-2"><FaEnvelope className="mr-2 text-accent" /> anivita.aggarwal@sgrh.com</p>
-                <p className="text-foreground flex items-center"><FaPhone className="mr-2 text-accent" />+91-8287186636</p>
+                <p className="text-foreground flex items-center"><FaPhone className="mr-2 text-accent" />+91-8826766636</p>
               </FadeUp>
             </div>
                 <div className="flex flex-row space-x-4 justify-start items-center mt-6">
@@ -159,7 +163,7 @@ Message: ${formData.message}`;
                         { icon: FaLinkedin, href: siteMetadata.linkedin },
                         { icon: FaFacebook, href: siteMetadata.facebook },
                       ].map((social, index) => (
-                        <motion.a
+                        <MotionA
                           key={index}
                           href={social.href}
                           target="_blank"
@@ -168,7 +172,7 @@ Message: ${formData.message}`;
                           whileHover={{ scale: 1.2 }}
                         >
                           <social.icon />
-                        </motion.a>
+                        </MotionA>
                       ))}
                     </div>
                   </FadeUp>
