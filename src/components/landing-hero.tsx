@@ -91,16 +91,16 @@ export default function LandingHero() {
                 height={400}
                 className="w-56 h-40 p-4 object-contain"
               />
-              <Image
+              {/* <Image
                 src="/images/karuna-logo.png"
                 alt="Karuna Hospital Logo"
                 width={400}
                 height={400}
                 className="w-56 h-40 p-4 object-contain"
-              />
+              /> */}
             </div>
             <p className="text-sm md:text-base lg:text-lg font-medium text-zinc-700 dark:text-zinc-300">
-              Consultant at Sir Ganga Ram Hospital & Karuna Hospital
+              Consultant at Sir Ganga Ram Hospital 
             </p>
           </div>
 

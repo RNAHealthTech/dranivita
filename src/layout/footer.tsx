@@ -66,7 +66,7 @@ export default function Footer() {
                 </FadeUp>
 
                 {/* Column 3: Office Hours */}
-                <FadeUp key="footer-office" whileInView duration={0.6}>
+                {/* <FadeUp key="footer-office" whileInView duration={0.6}>
                   <div className="w-1/2 md:w-1/3 pl-2 ">
                     <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">OPD Hours</h3>
                     <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-white/80">
@@ -74,7 +74,16 @@ export default function Footer() {
                       <li>Friday: 11:00 AM - 12:00 PM (Room No. G-1)</li>
                     </ul>
                   </div>
-                </FadeUp>
+                </FadeUp> */}
+                <FadeUp key="footer-office" whileInView duration={0.6}>
+  <div className="w-1/2 md:w-1/3 pl-2 ">
+    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-4">OPD Hours</h3>
+    <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-white/80">
+      <li>Daily: 02:00 PM - 03:00 PM (Room No. F-30)</li>
+    </ul>
+  </div>
+</FadeUp>
+
               </div>
 
               {/* Column 4: Contact Information */}
