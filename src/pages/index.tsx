@@ -7,6 +7,7 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 import BookAppointment from "@/components/bookappointment";
 import HomeServices from "@/components/homeservice";
 import HomeAbout from "@/components/home-about";
+import MediaCoverage from "@/components/MediaCoverage";
 
 const HomeBlog = dynamic(() => import('@/components/homeblog'), { ssr: false });
 
@@ -48,6 +49,7 @@ export default function Home() {
         <LandingHero />
         <HomeAbout />
         <HomeServices />
+        <MediaCoverage /> 
         <HomeBlog />
         <BookAppointment />
       </main>
