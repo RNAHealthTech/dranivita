@@ -143,7 +143,7 @@ Message: ${formData.message}`;
                 <h2 className="text-xl md:text-2xl font-semibold mb-3 text-accent flex items-center">
                   <FaClock className="mr-2" /> Consultation Hours
                 </h2>
-                <p className="text-foreground">Mon, Wed, Fri: 06:00 PM - 08:00 PM (Room No. F-30)</p>
+                <p className="text-foreground">Daily: 02:00 PM - 03:00 PM (Room No. F-30)</p>
                 <p className="text-foreground"></p>
               </FadeUp>
             </div>
